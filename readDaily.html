@@ -1,14 +1,19 @@
 <head>
   <title>readDaily</title>
+  <meta charset="utf-8" />
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+    <header>
+        <h1>readDaily</h1>
+    </header>
 
-  {{> hello}}
+    <div id="main-content">
+        <nav>Nav</nav>
+        <article>Article</article>
+    </div>
+
+    <footer>
+        {{year}}
+    </footer>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
