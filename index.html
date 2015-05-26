@@ -4,20 +4,24 @@
 </head>
 
 <body>
-    <header>
+    <div class="container">
+
+    <header class="row>">
+        <div class="four columns">
         <h1>readDaily</h1>
+        </div>
+        <div class="eight columns">
+        accounts stuff
+        </div>
     </header>
 
-    <div id="main-content">
-        <nav>
-            <ul>
-                <li><a href="">List</a></li>
-            </ul>
-        </nav>
+    <div id="main-content" class="row">
         {{> booksList }}
     </div>
 
-    <footer>
+    <footer class="row">
         {{year}}
     </footer>
+
+    </div>
 </body>

@@ -2,20 +2,19 @@
 
 body {
   background: #f7f7f7;
-  font-size: 16px; /* 1em == 16px */
 }
 
 header, footer {
   display: block;
-  margin: 4px;
 }
 
 header {
+  height: 65px;
 }
 
 header h1 {
   font-family: 'Lobster', cursive;
-  font-size: 3em;
+  font-size: 5rem;
   font-weight: 300;
   padding: 0;
   margin: 0;
@@ -27,21 +26,5 @@ footer {
 }
 
 #main-content {
-  margin: 4px;
   padding: 0;
-  display: flex;
-  flex-flow: row;
-}
-
-#main-content > nav {
-  flex: 3 1 20%;
-  order: 0;
-  padding: 5px;
-}
-
-#main-content > article {
-  flex: 1 1 80%;
-  order: 1;
-  margin-left: 10px;
-  padding: 5px;
 }
