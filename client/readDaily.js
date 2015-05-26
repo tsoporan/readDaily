@@ -4,4 +4,4 @@ Template.body.helpers({
   year: function() {
     return new Date().getFullYear();
   }
-})
+});
