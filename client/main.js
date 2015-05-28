@@ -2,7 +2,7 @@
 
 Meteor.subscribe('books');
 
-Template.body.helpers({
+Template.layout.helpers({
   year: function() {
     return new Date().getFullYear();
   }
