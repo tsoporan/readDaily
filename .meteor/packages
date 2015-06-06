@@ -8,3 +8,5 @@ meteor-platform
 skeleton:skeleton
 underscore
 iron:router
+sacha:spin
+underscorestring:underscore.string
