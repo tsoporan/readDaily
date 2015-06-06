@@ -58,7 +58,8 @@ if (Books.find().count() === 0) {
       title: b.title,
       author: b.author,
       pages: b.pages,
-      createdAt: b.createdAt
+      createdAt: b.createdAt,
+      slug: s.slugify(b.title)
     });
   });
 

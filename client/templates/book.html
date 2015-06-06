@@ -1,8 +1,9 @@
 <template name="book">
     <li class="book">
-        <h3>{{ title }}</h3>
+        <h3><a href="{{ pathFor 'book' }}">{{ title }}</a></h3>
         <p> {{ author }} </p>
         <span class="ts"> {{ createdAt }}</span>
         <p> Pages {{ pages }} </p>
+        <p> Slug: {{ slug  }} </p>
     </li>
 </template>
