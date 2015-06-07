@@ -10,3 +10,5 @@ underscore
 iron:router
 sacha:spin
 underscorestring:underscore.string
+accounts-password
+accounts-ui
