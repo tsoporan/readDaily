@@ -2,6 +2,7 @@
 
 body {
   background: #f7f7f7;
+  color: #222;
 }
 
 header, footer {
@@ -32,4 +33,40 @@ footer {
 
 #main-content {
   padding: 0;
+}
+
+h3.intro {
+  color: #222;
+  border-top: 1px solid #ECEAEA;
+  border-bottom: 1px solid #ECEAEA;
+  padding: 5px 0;
+  text-align: center;
+  margin: 50px 0;
+  font-size: 7rem;
+  text-shadow: 0px 1px 0px #fff;
+}
+
+#login-buttons {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+#login-sign-in-link {
+    background: #444;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    text-align: right;
+}
+
+#login-dropdown-list {
+    background: #ccc;
+    border-radius: 5px 0 5px 5px;
+    border: 1px solid #aaa;
+    padding: 8px;
+    display: block;
+    position: absolute;
+    top: 25px;
+    right:0;
 }
