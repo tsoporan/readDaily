@@ -14,22 +14,23 @@ Template.booksList.helpers({
 
 Template.booksCreate.events({
   'submit form' : function(e) {
+
     e.preventDefault();
 
-    var title = $(e.target).find('[name=title]').val();
- 
-
     var book = {
-      createdAt: new Date(),
-      title : title,
+      title : $(e.target).find('[name=title]').val(),
       author : $(e.target).find('[name=author]').val(),
       pages: $(e.target).find('[name=pages]').val(),
-      slug : s.slugify(title),
     };
 
-    book._id = Books.insert(book);
+    Meteor.call('addBook', book, function(err, result) {
+      if (err) {
+        return alert(err.reason);
+      }
 
-    Router.go('book', book);
+      Router.go('book', { slug: result.slug });
+
+    });
 
   },
 })
