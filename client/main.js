@@ -6,6 +6,17 @@ Template.layout.helpers({
   }
 });
 
+
+Template.booksList.events({
+  'click .add-book': function(e) {
+    e.preventDefault();
+
+    Router.go('booksCreate');
+
+    return false;
+  }
+});
+
 Template.booksCreate.events({
   'submit form' : function(e) {
 
@@ -28,4 +39,9 @@ Template.booksCreate.events({
     });
 
   },
+
+  'click button[name=cancel]' : function(e) {
+    e.preventDefault();
+    Router.go('booksList');
+  }
 })
