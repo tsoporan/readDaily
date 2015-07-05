@@ -6,12 +6,6 @@ Template.layout.helpers({
   }
 });
 
-Template.booksList.helpers({
-  books : function() {
-    return Books.find();
-  }
-});
-
 Template.booksCreate.events({
   'submit form' : function(e) {
 
@@ -21,6 +15,7 @@ Template.booksCreate.events({
       title : $(e.target).find('[name=title]').val(),
       author : $(e.target).find('[name=author]').val(),
       pages: $(e.target).find('[name=pages]').val(),
+      userId: Meteor.userId(),
     };
 
     Meteor.call('addBook', book, function(err, result) {
