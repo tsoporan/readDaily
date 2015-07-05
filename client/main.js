@@ -8,14 +8,23 @@ Template.layout.helpers({
 
 
 Template.booksList.events({
+  'click .completed-books' : function(e) {
+    e.preventDefault();
+    return Router.go('booksCompleted');
+  },
+
   'click .add-book': function(e) {
     e.preventDefault();
-
-    Router.go('booksCreate');
-
-    return false;
+    return Router.go('booksCreate');
   }
 });
+
+Template.booksCompleted.events({
+  'click .active-books': function(e) {
+    e.preventDefault();
+    return Router.go('booksList');
+  }
+})
 
 Template.booksCreate.events({
   'submit form' : function(e) {
