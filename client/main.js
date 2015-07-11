@@ -33,9 +33,7 @@ Template.booksCreate.events({
 
     var book = {
       title : $(e.target).find('[name=title]').val(),
-      author : $(e.target).find('[name=author]').val(),
       pages: $(e.target).find('[name=pages]').val(),
-      userId: Meteor.userId(),
     };
 
     Meteor.call('addBook', book, function(err, result) {
@@ -43,7 +41,7 @@ Template.booksCreate.events({
         return alert(err.reason);
       }
 
-      Router.go('book', { slug: result.slug });
+      Router.go('booksList');
 
     });
 
